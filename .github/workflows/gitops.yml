@@ -41,7 +41,7 @@ jobs:
           export ARM_CLIENT_SECRET=$(echo $AZURE_CREDENTIALS | jq -r .clientSecret)
           terraform init \
           -input=false \
-          -backend-config="resource_group_name=rg-terraform-001" \
+          -backend-config="resource_group_name=tfstaterg" \
           -backend-config="storage_account_name=$TF_STORAGE_ACCOUNT" \
           -backend-config="container_name=tfstate" \
           -backend-config="key=$ENVIRONMENT.terraform.tfstate"
