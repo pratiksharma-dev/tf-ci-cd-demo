@@ -14,7 +14,7 @@ on:
 
 env: 
   DOTNET_VERSION: '3.1'
-  APP_PACKAGE_PATH: 'Server' # set this to the path to your web app project, defaults to the repository root
+  APP_PACKAGE_PATH: '.\simple-web-app-mvc-dotnet-master' # set this to the path to your web app project, defaults to the repository root
 
 jobs:
   manage-infrastructure:
@@ -67,10 +67,8 @@ jobs:
           with:
             dotnet-version: ${{ env.DOTNET_VERSION }}
         - name: Build .NET app
-          #working-directory: ${{ env.APP_PACKAGE_PATH }}
-          run: |
-            echo "{{$env.APP_PACKAGE_PATH}}"
-            dotnet build --configuration Release
+          working-directory: ${{ env.APP_PACKAGE_PATH }}
+          run: dotnet build --configuration Release
         - name: Publish .NET app
           run: dotnet publish -c Release -o output
           working-directory: ${{ env.APP_PACKAGE_PATH }}          
