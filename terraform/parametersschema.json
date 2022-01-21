@@ -65,10 +65,11 @@
                 },
                 "maxCount": {
                   "type": "integer",
-                  "message": {
-            "required": "Date of Birth is Required Property",
-            "pattern": "Correct format of Date Of Birth is dd-mmm-yyyy"
-        }
+                   "errorMessage": {
+                     "type": "should be an object", 
+                     "required": "should have property foo",
+                     "additionalProperties": "should not have properties other than foo"
+                   }
                 },
                 "minCount": {
                   "type": "integer"
