@@ -35,7 +35,12 @@
     },
     "deploymentModel": {
       "type": "string",
-      "enum": ["onboarding", "lifecycle", "deletion"]
+      "enum": ["onboarding", "lifecycle", "deletion"],
+       "errorMessage": {
+         "type": "should be an object", 
+         "required": "should have property foo",
+         "additionalProperties": "should not have properties other than foo"
+       }
     },
     "patchSchedule": {
       "type": "string"
@@ -64,12 +69,7 @@
                   "type": "integer"
                 },
                 "maxCount": {
-                  "type": "integer",
-                   "errorMessage": {
-                     "type": "should be an object", 
-                     "required": "should have property foo",
-                     "additionalProperties": "should not have properties other than foo"
-                   }
+                  "type": "integer"
                 },
                 "minCount": {
                   "type": "integer"
