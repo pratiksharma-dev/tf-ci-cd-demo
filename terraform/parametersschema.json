@@ -65,7 +65,10 @@
                 },
                 "maxCount": {
                   "type": "integer",
-                  "description":"provide integer value"
+                  "message": {
+            "required": "Date of Birth is Required Property",
+            "pattern": "Correct format of Date Of Birth is dd-mmm-yyyy"
+        }
                 },
                 "minCount": {
                   "type": "integer"
