@@ -64,7 +64,8 @@
                   "type": "integer"
                 },
                 "maxCount": {
-                  "type": "integer"
+                  "type": "integer",
+                  "description":"provide integer value"
                 },
                 "minCount": {
                   "type": "integer"
