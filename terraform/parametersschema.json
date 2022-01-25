@@ -12,9 +12,9 @@
     "environment": {
       "type": "string",
       "enum": ["nonProduction","Production","nonProductionPCI","ProductionPCI"],
-       "errorMessage": {
-         "type": "should be an string"
-       }  
+       "anyOf": [
+          { "type": "string", "maxLength": 20 }
+        ] 
     },  
     "functionalArea": {
       "type": "string",
