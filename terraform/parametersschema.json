@@ -39,12 +39,7 @@
     },
     "deploymentModel": {
       "type": "string",
-      "enum": ["onboarding", "lifecycle", "deletion"],
-       "errorMessage": {
-         "type": "should be an object", 
-         "required": "should have property foo",
-         "additionalProperties": "should not have properties other than foo"
-       } 
+      "enum": ["onboarding", "lifecycle", "deletion"]
     },
     "patchSchedule": {
       "type": "string"
