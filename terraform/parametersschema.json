@@ -8,8 +8,9 @@
     "clusterNumber": {
       "type": "string",
       "enum": ["01","02","03","04","05","06","07","08","09","10"],
-       "anyOf": [
-          { "type": "string", "maxLength": 3 }
+       "allOf": [
+          { "type": "string" },
+          { "maxLength": 5 }
         ] 
     },
     "environment": {
