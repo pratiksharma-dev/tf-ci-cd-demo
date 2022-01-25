@@ -13,9 +13,7 @@
       "type": "string",
       "enum": ["nonProduction","Production","nonProductionPCI","ProductionPCI"],
        "errorMessage": {
-         "type": "should be an object", 
-         "required": "should have property foo",
-         "additionalProperties": "should not have properties other than foo"
+         "type": "should be an string"
        }  
     },  
     "functionalArea": {
